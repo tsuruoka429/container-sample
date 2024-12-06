@@ -5,8 +5,8 @@ env:
     ECR_REPOSITORY: 761018881084.dkr.ecr.ap-northeast-1.amazonaws.com/xcat-test-ecr
 env:
   parameter-store:
-    DOCKER_USER: dockerhub-user
-    DOCKER_TOKEN: dockerhub-token
+    DOCKER_USER: xcat-tsuruoka-dockerhub-user
+    DOCKER_TOKEN: xcat-tsuruoka-dockerhub-token
 
 phases:
   pre_build:
