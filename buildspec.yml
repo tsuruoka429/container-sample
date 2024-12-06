@@ -18,8 +18,8 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t container-test-app .
-      - docker tag container-test-app:latest ${ECR_REPOSITORY}:latest
+      - docker build -t xcat-container-test-app .
+      - docker tag xcat-container-test-app:latest ${ECR_REPOSITORY}:latest
   post_build:
     commands:
       - echo Pushing the Docker image...
@@ -29,7 +29,7 @@ phases:
       - |
         echo '[
           {
-            "name": "container-test-app",
+            "name": "xcat-container-test-app",
             "imageUri": "'${ECR_REPOSITORY}':latest"
           }
         ]' > imagedefinitions.json
